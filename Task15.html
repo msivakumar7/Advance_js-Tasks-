@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task15</title>
+</head>
+<body>
+    <script>
+        function multiplier(factor) {
+    return function (number) {
+        return number * factor;
+    };
+}
+const double = multiplier(2);
+const triple = multiplier(3);
+console.log(double(5)); 
+console.log(triple(5))
+
+    </script>
+</body>
+</html>

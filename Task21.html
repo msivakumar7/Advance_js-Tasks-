@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task21</title>
+</head>
+<body>
+    <script>    
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Data fetched"), 1000);
+    });
+}
+async function fetchDataAsync() {
+    const data = await fetchData();
+    console.log(data);
+}
+fetchDataAsync();
+    </script>
+</body>
+</html>

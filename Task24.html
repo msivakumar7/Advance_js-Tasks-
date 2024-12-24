@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task24</title>
+</head>
+<body>
+    <script>
+        async function fetchMultipleData() {
+    const urls = [
+        'https://jsonplaceholder.typicode.com/posts',
+        'https://jsonplaceholder.typicode.com/users'
+    ];
+    const promises = urls.map(url => fetch(url).then(res => res.json()));
+    const [posts, users] = await Promise.all(promises);
+    console.log('Posts:', posts);
+    console.log('Users:', users);
+}
+fetchMultipleData();
+
+    </script>
+</body>
+</html>

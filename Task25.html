@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task25</title>
+</head>
+<body>
+    <script>
+        async function completeOperations() {
+    const op1 = new Promise(resolve => setTimeout(() => resolve('Operation 1 completed'), 1000));
+    const op2 = new Promise(resolve => setTimeout(() => resolve('Operation 2 completed'), 2000));
+    const op3 = new Promise(resolve => setTimeout(() => resolve('Operation 3 completed'), 1500));
+
+    const results = await Promise.all([op1, op2, op3]);
+    console.log('All operations completed:', results);
+}
+completeOperations();
+    </script>
+</body>
+</html>

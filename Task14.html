@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task14</title>
+</head>
+<body>
+    <script>
+        function privateVariable() {
+    let secret = "This is private";
+    return {
+        getSecret: function () {
+            return secret;
+        },
+        setSecret: function (newSecret) {
+            secret = newSecret;
+        }
+    };
+}
+
+const secretHandler = privateVariable();
+console.log(secretHandler.getSecret());
+secretHandler.setSecret("New secret");
+console.log(secretHandler.getSecret()); 
+
+    </script>
+</body>
+</html>

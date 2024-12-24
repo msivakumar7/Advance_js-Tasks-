@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task20</title>
+</head>
+<body>
+    <script>
+        function task1() {
+    return Promise.resolve("Task 1 Completed");
+}
+
+function task2(previousResult) {
+    return Promise.resolve(previousResult + " -> Task 2 Completed");
+}
+
+function task3(previousResult) {
+    return Promise.resolve(previousResult + " -> Task 3 Completed");
+}
+task1()
+    .then(result => task2(result))
+    .then(result => task3(result))
+    .then(finalResult => console.log(finalResult))
+    .catch(error => console.error("Error:", error));
+    </script>
+</body>
+</html>

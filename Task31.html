@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task31</title>
+</head>
+<body>
+    <h4>It is one of the Mouse event in Javascript!.when i click the submit button then description of elephant is shown</h4>
+    <p id="para"></p>
+    <input type ="button" value ="submit" onclick="MyElephant()">
+    <script>
+        function MyElephant()
+        {
+        var p = document.getElementById("para");
+        const content ="Elephants are the largest land mammals on earth and have distinctly massive bodies, large ears, and long trunks.<br> They use their trunks to pick up objects, trumpet warnings, greet other elephants, <br>or suck up water for drinking or bathing, among other uses.";
+        p.innerHTML = content;
+        }
+  </script>
+</body>
+</html>
