@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility by Removing Element</title>
+</head>
+<body>
+    <div id="content">
+        This content can be toggled.
+    </div>
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+    <script>
+        var content = document.getElementById("content");
+        var parent = content.parentNode;
+
+        function toggleVisibility() {
+            if (content.parentNode) {
+                parent.removeChild(content);
+            } else {
+                parent.appendChild(content);
+            }
+        }
+    </script>
+</body>
+</html>

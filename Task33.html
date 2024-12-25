@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="di">
+        Something is inside here!!!
+    </div>
+    <input type="button" value="click me" id ="bd" onclick="app()"/>
+    <script>
+        var div = document.getElementById("di");
+        function app(){
+        var ele = document.createElement('h1');
+        ele.innerHTML ="Hello,World!"   
+        div.appendChild(ele);
+        }
+    </script>
+</body>
+</html>

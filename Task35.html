@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve and Modify Attributes</title>
+</head>
+<body>
+    <img id="image" src="https://static.vecteezy.com/system/resources/thumbnails/026/525/162/small/lion-animal-isolated-photo.jpg" alt="Example Image" height="150px" width="200px"><br>
+    <button onclick="modifyAttributes()">Modify Attributes</button>
+
+    <script>
+        function modifyAttributes() {
+
+            var img = document.getElementById("image");
+
+            var currentSrc = img.getAttribute("src");
+            var currentAlt = img.getAttribute("alt");
+            
+            console.log("Current src:", currentSrc);
+            console.log("Current alt:", currentAlt);
+
+            img.setAttribute("src", "https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"); // Change the image source
+            img.setAttribute("alt", "Updated Example Image");
+            var updatedSrc = img.getAttribute("src");
+            var updatedAlt = img.getAttribute("alt");
+
+            console.log("Updated src:", updatedSrc);
+            console.log("Updated alt:", updatedAlt);
+        }
+    </script>
+</body>
+</html>
