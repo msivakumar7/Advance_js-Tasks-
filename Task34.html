@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 34</title>
+    <title>Toggle Visibility by Removing Element</title>
 </head>
 <body>
     <div id="content">
-        This content can be toggled when click the Toggle button.
+        This content can be toggled.
     </div>
-    <button onclick="toggleVisibility()">Toggle</button>
-
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
     <script>
+        var content = document.getElementById("content");
+        var parent = content.parentNode;
+
         function toggleVisibility() {
-            var content = document.getElementById("content");
-            if (content.style.visibility === "hidden")
-             {
-                content.style.visibility = "visible";
-            } 
-            else 
-            {
-                content.style.visibility = "hidden";
+            if (content.parentNode) {
+                parent.removeChild(content);
+            } else {
+                parent.appendChild(content);
             }
         }
     </script>
