@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 34</title>
+</head>
+<body>
+    <div id="content">
+        This content can be toggled when click the Toggle button.
+    </div>
+    <button onclick="toggleVisibility()">Toggle</button>
+
+    <script>
+        function toggleVisibility() {
+            var content = document.getElementById("content");
+            if (content.style.visibility === "hidden")
+             {
+                content.style.visibility = "visible";
+            } 
+            else 
+            {
+                content.style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+</html>
