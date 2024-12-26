@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+function flattenArray(ipArray) {
+let outputArray = [];
+recursion(0, ipArray, outputArray);
+return outputArray;
+}
+function recursion(index, ipArray, outputArray) {
+if (index >= ipArray.length)
+return;
+if (Array.isArray(ipArray[index]))
+recursion(0, ipArray[index], outputArray);
+else
+outputArray.push(ipArray[index]);
+recursion(index + 1, ipArray, outputArray);
+}
+var inputArray = [1, 2, [3, [4]], 5, 34];
+document.writeln("InputArray After flatterning:<br>");
+var flatArray = flattenArray(inputArray);
+document.writeln(flatArray);
+// document.writeln(flatArray[3]);
+</script>
+</body>
+</html>

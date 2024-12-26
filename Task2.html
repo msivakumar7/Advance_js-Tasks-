@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Fibonacci_Series</title>
+</head>
+<body>
+<script>
+let fib =(n,prev1,prev2)=> {
+if(n < 3)
+return;
+var crnt = prev1 + prev2;
+document.writeln(crnt +" ");
+prev2 = prev1;
+prev1 = crnt;
+fib(n-1,prev1,prev2);
+}
+let printfib= (n)=>{
+var prev2 = 0;
+var prev1 = 1;
+if(n < 1)
+document.writeln("Invalid input!");
+else if(n == 1)
+document.writeln(prev2 +" ");
+else if(n >= 2){
+document.writeln(prev2+" "+prev1+" ");
+fib(n,prev1,prev2);
+} }
+var n = 10;
+document.writeln("Fibonacci Series...<br>");
+printfib(n);
+</script>
+</body>
+</html>

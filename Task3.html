@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>
+Total_Ways
+</title>
+</head>
+<body>
+<script>
+let countways = (n)=>{
+if(n == 0)
+return 1;
+if(n < 0)
+return 0;
+return countways(n-1) + countways(n-2) + countways(n-3);
+}
+var n = 7;
+document.writeln("Totol number of ways...<br>");
+document.writeln(countways(n));
+</script>
+</body>
+</html>

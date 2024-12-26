@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Java </title>
+</head>
+<body>
+<script>
+function towerOfHanoi(n, fromRod, toRod, auxRod) {
+ if (n === 1) {
+ console.log(`Move disk 1 from ${fromRod} to ${toRod}`);
+ return;
+ }
+ towerOfHanoi(n - 1, fromRod, auxRod, toRod);
+ console.log(`Move disk ${n} from ${fromRod} to ${toRod}`);
+ towerOfHanoi(n - 1, auxRod, toRod, fromRod);
+}
+const numberofdisks = 3;
+towerOfHanoi(numberofdisks, 'A', 'C', 'B');
+</script>
+</body>
+</html>
