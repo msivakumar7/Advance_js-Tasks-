@@ -8,13 +8,13 @@
 <body>
     <script>
         function privateVariable() {
-    let secret = "This is private";
+    let scrt = "This is private";
     return {
         getSecret: function () {
-            return secret;
+            return scrt;
         },
         setSecret: function (newSecret) {
-            secret = newSecret;
+            scrt = newSecret;
         }
     };
 }
