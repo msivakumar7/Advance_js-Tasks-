@@ -7,21 +7,24 @@
 </head>
 <body>
     <script>
-        function counter() {
+        function counter() 
+        {
     let count = 0;
     return {
-        increment: function () {
+        increment: function () 
+        {
             count++;
         },
-        getCount: function () {
+        getCount: function () 
+        {
             return count;
         }
     };
 }
-const myCounter = counter();
-myCounter.increment();
-myCounter.increment();
-console.log(myCounter.getCount());
+const Counter = counter();
+Counter.increment();
+Counter.increment();
+console.log(Counter.getCount());
 
     </script>
 </body>
